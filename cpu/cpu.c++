@@ -67,21 +67,27 @@ long long getCPUTotal(string cpuName)
 int main()
 {
     vector<string> cpu = getCPUName();
+    vector<long long> idle1 ;
+    vector<long long> total1;
+    
     for (string cpuName : cpu)
     {
 
-        long long idle1 = getCPUIdle(cpuName);
-        long long total1 = getCPUTotal(cpuName);
-        this_thread::sleep_for(chrono::seconds(1));
+        idle1.push_back(getCPUIdle(cpuName));
+        total1.push_back(getCPUTotal(cpuName));
+    }
+    this_thread::sleep_for(chrono::seconds(1));
 
-        long long idle2 = getCPUIdle(cpuName);
-        long long total2 = getCPUTotal(cpuName);
+    for (int i = 0; i < cpu.size();i++)
+    {
+    long long idle2 = getCPUIdle(cpu[i]);
+    long long total2 = getCPUTotal(cpu[i]);
 
-        long long idle = idle2 - idle1;
-        long long total = total2 - total1;
+        long long idle = idle2 - idle1[i];
+        long long total = total2 - total1[i];
         double cpu_usage = 100.0 * (total - idle) / total;
 
-        cout << cpuName << " " << cpu_usage << "%"<< "\n";
+        cout << cpu[i] << " " << cpu_usage << "%" << "\n";
     }
     return 0;
 }
