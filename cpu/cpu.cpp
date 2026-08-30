@@ -7,7 +7,7 @@
 
 using namespace std;
 
-vector<string> getCPUName()
+vector<string> getCPUName() 
 {
     ifstream cpuData("/proc/stat");
     string line;
