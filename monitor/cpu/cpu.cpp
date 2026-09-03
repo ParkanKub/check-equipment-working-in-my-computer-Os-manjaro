@@ -1,9 +1,9 @@
+#include "cpu.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <thread>
 #include <chrono>
-#include <vector>
 
 using namespace std;
 
@@ -64,30 +64,30 @@ long long getCPUTotal(string cpuName)
     return -1;
 }
 
-int main()
-{
-    vector<string> cpu = getCPUName();
-    vector<long long> idle1 ;
-    vector<long long> total1;
+// int main()
+// {
+//     vector<string> cpu = getCPUName();
+//     vector<long long> idle1 ;
+//     vector<long long> total1;
     
-    for (string cpuName : cpu)
-    {
+//     for (string cpuName : cpu)
+//     {
 
-        idle1.push_back(getCPUIdle(cpuName));
-        total1.push_back(getCPUTotal(cpuName));
-    }
-    this_thread::sleep_for(chrono::seconds(1));
+//         idle1.push_back(getCPUIdle(cpuName));
+//         total1.push_back(getCPUTotal(cpuName));
+//     }
+//     this_thread::sleep_for(chrono::seconds(1));
 
-    for (int i = 0; i < cpu.size();i++)
-    {
-    long long idle2 = getCPUIdle(cpu[i]);
-    long long total2 = getCPUTotal(cpu[i]);
+//     for (int i = 0; i < cpu.size();i++)
+//     {
+//     long long idle2 = getCPUIdle(cpu[i]);
+//     long long total2 = getCPUTotal(cpu[i]);
 
-        long long idle = idle2 - idle1[i];
-        long long total = total2 - total1[i];
-        double cpu_usage = 100.0 * (total - idle) / total;
+//         long long idle = idle2 - idle1[i];
+//         long long total = total2 - total1[i];
+//         double cpu_usage = 100.0 * (total - idle) / total;
 
-        cout << cpu[i] << " " << cpu_usage << "%" << "\n";
-    }
-    return 0;
-}
+//         cout << cpu[i] << " " << cpu_usage << "%" << "\n";
+//     }
+//     return 0;
+// }
