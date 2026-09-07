@@ -1,5 +1,6 @@
 #include "cpu/cpu.h"
 #include <QApplication>
+#include <QMessageBox>
 #include <QWidget>
 
 #include <iostream>
@@ -14,8 +15,12 @@ int main(int argc, char *argv[])
 {
     long long numberOfCPUs = getNumberOfCPUs();
 
-    cout << "Number of CPUs: " << numberOfCPUs << endl;
     QApplication a(argc, argv);
+    QMessageBox msgBox;
+
+    msgBox.setText("Number of CPUs: " + QString::number(numberOfCPUs));
+    msgBox.exec();
+
     QWidget window;
     window.resize(500, 300);
     window.show();

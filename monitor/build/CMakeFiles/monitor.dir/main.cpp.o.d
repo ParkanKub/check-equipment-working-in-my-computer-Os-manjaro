@@ -228,22 +228,25 @@ CMakeFiles/monitor.dir/main.cpp.o: \
  /usr/include/qt/QtCore/qvariant.h /usr/include/qt/QtCore/qmap.h \
  /usr/include/qt/QtCore/qhash.h /usr/include/c++/16/variant \
  /usr/include/c++/16/bits/monostate.h \
- /usr/include/qt/QtCore/qshareddata.h /usr/include/qt/QtWidgets/QWidget \
- /usr/include/qt/QtWidgets/qwidget.h /usr/include/qt/QtGui/qpaintdevice.h \
- /usr/include/qt/QtCore/qrect.h /usr/include/qt/QtGui/qpalette.h \
- /usr/include/qt/QtGui/qcolor.h /usr/include/qt/QtGui/qrgb.h \
- /usr/include/qt/QtGui/qrgba64.h /usr/include/qt/QtGui/qbrush.h \
- /usr/include/qt/QtGui/qmatrix.h /usr/include/qt/QtGui/qpolygon.h \
- /usr/include/qt/QtGui/qregion.h /usr/include/qt/QtCore/qdatastream.h \
- /usr/include/qt/QtCore/qiodevice.h /usr/include/qt/QtCore/qline.h \
- /usr/include/qt/QtGui/qtransform.h /usr/include/qt/QtGui/qimage.h \
- /usr/include/qt/QtGui/qpixelformat.h /usr/include/qt/QtGui/qpixmap.h \
- /usr/include/qt/QtCore/qsharedpointer.h \
+ /usr/include/qt/QtCore/qshareddata.h \
+ /usr/include/qt/QtWidgets/QMessageBox \
+ /usr/include/qt/QtWidgets/qmessagebox.h \
+ /usr/include/qt/QtWidgets/qdialog.h /usr/include/qt/QtWidgets/qwidget.h \
+ /usr/include/qt/QtGui/qpaintdevice.h /usr/include/qt/QtCore/qrect.h \
+ /usr/include/qt/QtGui/qpalette.h /usr/include/qt/QtGui/qcolor.h \
+ /usr/include/qt/QtGui/qrgb.h /usr/include/qt/QtGui/qrgba64.h \
+ /usr/include/qt/QtGui/qbrush.h /usr/include/qt/QtGui/qmatrix.h \
+ /usr/include/qt/QtGui/qpolygon.h /usr/include/qt/QtGui/qregion.h \
+ /usr/include/qt/QtCore/qdatastream.h /usr/include/qt/QtCore/qiodevice.h \
+ /usr/include/qt/QtCore/qline.h /usr/include/qt/QtGui/qtransform.h \
+ /usr/include/qt/QtGui/qimage.h /usr/include/qt/QtGui/qpixelformat.h \
+ /usr/include/qt/QtGui/qpixmap.h /usr/include/qt/QtCore/qsharedpointer.h \
  /usr/include/qt/QtCore/qsharedpointer_impl.h \
  /usr/include/qt/QtGui/qfont.h /usr/include/qt/QtGui/qfontmetrics.h \
  /usr/include/qt/QtGui/qfontinfo.h \
  /usr/include/qt/QtWidgets/qsizepolicy.h \
- /usr/include/qt/QtGui/qkeysequence.h /usr/include/c++/16/iostream \
+ /usr/include/qt/QtGui/qkeysequence.h /usr/include/qt/QtWidgets/QWidget \
+ /usr/include/qt/QtWidgets/qwidget.h /usr/include/c++/16/iostream \
  /usr/include/c++/16/ostream /usr/include/c++/16/bits/ostream.h \
  /usr/include/c++/16/ios /usr/include/c++/16/bits/basic_ios.h \
  /usr/include/c++/16/bits/locale_facets.h /usr/include/c++/16/cwctype \
