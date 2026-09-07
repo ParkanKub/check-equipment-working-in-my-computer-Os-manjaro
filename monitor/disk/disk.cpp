@@ -23,12 +23,12 @@ long long getDiskRead(){
     return 0;
 }
 
-int main() {
-    long long initialRead = getDiskRead();
-    this_thread::sleep_for(chrono::seconds(5));
-    long long finalRead = getDiskRead();
-    long long readSectors = finalRead - initialRead;
-    long long readBytes = readSectors * 512;
-    double mb = (double)readBytes / (1024 * 1024);
-    cout << "Disk Usage: " << mb << " MB/s\n";
-}
+// int main() {
+//     long long initialRead = getDiskRead();
+//     this_thread::sleep_for(chrono::seconds(5));
+//     long long finalRead = getDiskRead();
+//     long long readSectors = finalRead - initialRead;
+//     long long readBytes = readSectors * 512;
+//     double mb = (double)readBytes / (1024 * 1024);
+//     cout << "Disk Usage: " << mb << " MB/s\n";
+// }

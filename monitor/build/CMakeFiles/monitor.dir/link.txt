@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/monitor.dir/link.d CMakeFiles/monitor.dir/main.cpp.o CMakeFiles/monitor.dir/cpu/cpu.cpp.o CMakeFiles/monitor.dir/disk/disk.cpp.o CMakeFiles/monitor.dir/ram/ram.cpp.o CMakeFiles/monitor.dir/network/network.cpp.o -o monitor  /usr/lib/libQt5Widgets.so.5.15.19 /usr/lib/libQt5Gui.so.5.15.19 /usr/lib/libQt5Core.so.5.15.19
