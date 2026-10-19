@@ -1,3 +1,0 @@
-/home/kob_yai/Documents/GitHub/check-equipment-working-in-my-computer-Os-manjaro/monitor/build/CMakeFiles/monitor.dir
-/home/kob_yai/Documents/GitHub/check-equipment-working-in-my-computer-Os-manjaro/monitor/build/CMakeFiles/edit_cache.dir
-/home/kob_yai/Documents/GitHub/check-equipment-working-in-my-computer-Os-manjaro/monitor/build/CMakeFiles/rebuild_cache.dir
