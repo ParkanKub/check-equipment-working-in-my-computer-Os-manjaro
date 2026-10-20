@@ -17,9 +17,9 @@ vector<string> getCPUName()
         istringstream ss(line);
         string cpu;
         ss >> cpu;
-        if (cpu.rfind("cpu", 0) == 0)
+        if(cpu == "cpu" || cpu.find("cpu") == 0 && cpu.size() > 3) 
         {
-            cpuNames.push_back(cpu);
+            cpuNames.push_back(cpu);//ติดไว้ก่อน
         }
     }
     return cpuNames;
@@ -35,12 +35,18 @@ long long getCPUIdle(string cpuName)
         istringstream ss(line);
 
         string cpu;
-        long long user, nice, system, idle;
-        ss >> cpu >> user >> nice >> system >> idle;
+
+        if(!(ss>>cpu)) continue; // Skip lines that don't start with a CPU name
+
         if (cpu == cpuName)
         {
-            return idle;
-        }
+        long long value;
+        long long idle = 0;
+        long long iowait = 0;
+        if(!(ss >> value >> value >> value >> idle)) return -1; // Skip lines that don't have enough values
+        ss >> iowait; // Read the iowait value
+        return idle + iowait;
+    }
     }
     return -1;
 }
@@ -53,41 +59,17 @@ long long getCPUTotal(string cpuName)
     {
         istringstream ss(line);
         string cpu;
-        long long user, nice, system, idle;
-        ss >> cpu >> user >> nice >> system >> idle;
+        if(!(ss>>cpu))continue; // Skip lines that don't start with a CPU name
+
         if (cpu == cpuName)
         {
-
-            return user + nice + system + idle;
+            long long value;
+            long long total =0;
+            while (ss >> value){
+                total += value;
+            }
+            return total;
         }
     }
     return -1;
 }
-
-// int main()
-// {
-//     vector<string> cpu = getCPUName();
-//     vector<long long> idle1 ;
-//     vector<long long> total1;
-    
-//     for (string cpuName : cpu)
-//     {
-
-//         idle1.push_back(getCPUIdle(cpuName));
-//         total1.push_back(getCPUTotal(cpuName));
-//     }
-//     this_thread::sleep_for(chrono::seconds(1));
-
-//     for (int i = 0; i < cpu.size();i++)
-//     {
-//     long long idle2 = getCPUIdle(cpu[i]);
-//     long long total2 = getCPUTotal(cpu[i]);
-
-//         long long idle = idle2 - idle1[i];
-//         long long total = total2 - total1[i];
-//         double cpu_usage = 100.0 * (total - idle) / total;
-
-//         cout << cpu[i] << " " << cpu_usage << "%" << "\n";
-//     }
-//     return 0;
-// }
